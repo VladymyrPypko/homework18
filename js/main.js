@@ -4,7 +4,7 @@ let userEmail = prompt('Enter your email:');
 let userYear = prompt('Enter your birth year:');
 
 function trimSpaces(str){
-    return str.trim().replace(/\s+/g, '').replace(/-\s+/g, '-').replace(/\s+-/g, '-').toLowerCase();
+    return str.trim().replace(/\s+/g, ' ').replace(/-\s+/g, '-').replace(/\s+-/g, '-');
 }
 
 function capitalizeChars(str){
