@@ -8,7 +8,9 @@ function trimSpaces(str){
 }
 
 function capitalizeChars(str){
-    return str.replace(/\b\w/g, char => char.toUpperCase());
+    return str.replace(/(^|\s|-)([a-zа-яёїієґ])/gi, function(match, separator, char) {
+        return separator + char.toUpperCase();
+    });
 }
 
 function checkEmail(email){
